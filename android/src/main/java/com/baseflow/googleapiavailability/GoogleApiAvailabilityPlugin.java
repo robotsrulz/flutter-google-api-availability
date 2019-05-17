@@ -48,7 +48,7 @@ public class GoogleApiAvailabilityPlugin implements MethodCallHandler {
 
   public static void registerWith(Registrar registrar) {
     final MethodChannel channel = new MethodChannel(registrar.messenger(), "flutter.baseflow.com/google_api_availability/methods");
-    channel.setMethodCallHandler(new GoogleApiAvailabilityPlugin(registrar.context()));
+    channel.setMethodCallHandler(new GoogleApiAvailabilityPlugin(registrar.activeContext()));
   }
 
   private final Context context;
